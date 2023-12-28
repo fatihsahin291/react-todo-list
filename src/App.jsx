@@ -1,10 +1,13 @@
 import "./App.css";
+import AppLayout from "./AppLayout";
 import Notes from "./notes";
 
 function App() {
 	return (
 		<>
-			<Notes />
+			<AppLayout>
+				<Notes />
+			</AppLayout>
 		</>
 	);
 }

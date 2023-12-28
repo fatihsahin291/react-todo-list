@@ -1,0 +1,38 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+
+.add-note {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5f5f5;
+	border-radius: 8px;
+	gap: 1rem;
+	width: 60%;
+	height: 60%;
+	padding: 1rem;
+}
+
+.note-input {
+	width: 40dvw;
+	height: 40px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+}
+
+.pin-btn {
+	background-color: transparent;
+	border: none;
+}
