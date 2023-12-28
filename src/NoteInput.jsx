@@ -8,18 +8,37 @@ function NoteInput() {
 	return (
 		<div className="overlay">
 			<div className="add-note">
-				<input
-					type="text"
-					name="title"
-					placeholder="Enter Title"
-					className="note-input"
-				/>
-				<button
-					className="btn pin-btn"
-					onClick={() => setIsPinned(!isPinned)}
-				>
-					{isPinned ? <BsPinFill /> : <BsPin />}
-				</button>
+				<div className="title">
+					<input
+						type="text"
+						name="title"
+						placeholder="Enter Title"
+						className="note-input"
+					/>
+					<button
+						className="btn pin-btn"
+						onClick={() => setIsPinned(!isPinned)}
+					>
+						{isPinned ? <BsPinFill /> : <BsPin />}
+					</button>
+				</div>
+
+				<div className="body">
+					<textarea
+						name="body"
+						placeholder="Enter Note"
+						className="note-body-input"
+					/>
+				</div>
+
+				<div className="btns">
+					<button className="btn save-btn">
+						Save
+					</button>
+					<button className="btn cancel-btn">
+						Cancel
+					</button>
+				</div>
 			</div>
 		</div>
 	);

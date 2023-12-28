@@ -1,13 +1,14 @@
 import "./styles/notes.css";
 import NoteInput from "./NoteInput";
 import NotePreview from "./NotePreview";
+import { useState } from "react";
 
 const fakeNotes = [
 	{
 		id: 1,
 		pinned: true,
 		title: "First Note",
-		body: "This is the body of the first note",
+		body: "This is the body of the first note. This is the body of the first note. This is the body of the first note. This is the body of the first note.",
 	},
 	{
 		id: 2,
@@ -24,17 +25,38 @@ const fakeNotes = [
 ];
 
 function Notes() {
+	const [notes, setNotes] = useState(fakeNotes);
+
 	return (
 		<div>
 			<NoteInput />
 
 			<div className="notes-preview">
-				{fakeNotes.map((note) => (
-					<NotePreview
-						key={note.id}
-						note={note}
-					/>
-				))}
+				<div className="pinned">
+					{fakeNotes.map((note) =>
+						note.pinned ? (
+							<NotePreview
+								key={note.id}
+								note={note}
+							/>
+						) : (
+							""
+						)
+					)}
+				</div>
+
+				<div className="not-pinned">
+					{fakeNotes.map((note) =>
+						!note.pinned ? (
+							<NotePreview
+								key={note.id}
+								note={note}
+							/>
+						) : (
+							""
+						)
+					)}
+				</div>
 			</div>
 
 			<div className="remove-all">
