@@ -13,7 +13,7 @@ function NoteDetails({
 	const [isPinned, setIsPinned] =
 		useState(pinned);
 
-	function handleAddNote() {
+	function handleSaveNote() {
 		const title = document.querySelector(
 			".note-input[name='title']"
 		).value;
@@ -23,13 +23,9 @@ function NoteDetails({
 
 		if (!title || !body) return setSeeNote(false);
 
-		const newNote = notes.find(
-			(note) => note.id === note.id
-		);
-
-		newNote.title = title;
-		newNote.body = body;
-		newNote.pinned = isPinned;
+		note.title = title;
+		note.body = body;
+		note.pinned = isPinned;
 
 		setSeeNote(false);
 	}
@@ -72,7 +68,7 @@ function NoteDetails({
 				<div className="btns">
 					<button
 						className="btn save-btn"
-						onClick={handleAddNote}
+						onClick={handleSaveNote}
 					>
 						Save
 					</button>
