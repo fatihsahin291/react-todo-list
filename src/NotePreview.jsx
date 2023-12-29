@@ -8,6 +8,8 @@ function NotePreview({
 }) {
 	const { title, body, pinned, id } = note;
 
+	console.log(note);
+
 	return (
 		<div
 			className="note-preview"
@@ -18,7 +20,7 @@ function NotePreview({
 		>
 			<div className="note-title">
 				{title}
-				{pinned ? <BsPinFill /> : ""}
+				{pinned === "true" ? <BsPinFill /> : ""}
 			</div>
 			<div className="note-body">
 				{body.slice(0, 40) + "..."}

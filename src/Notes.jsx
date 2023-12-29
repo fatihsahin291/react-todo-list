@@ -1,36 +1,26 @@
 import "./styles/notes.css";
+import { useEffect, useState } from "react";
 import NoteInput from "./NoteInput";
 import NotePreview from "./NotePreview";
-import { useState } from "react";
 import AddNote from "./AddNote";
 import NoteDetails from "./NoteDetails";
-
-let fakeNotes = [
-	{
-		id: 1,
-		pinned: true,
-		title: "First Note",
-		body: "This is the body of the first note. This is the body of the first note. This is the body of the first note. This is the body of the first note.",
-	},
-	{
-		id: 2,
-		pinned: false,
-		title: "Second Note",
-		body: "This is the body of the second note",
-	},
-	{
-		id: 3,
-		pinned: false,
-		title: "Third Note",
-		body: "This is the body of the third note",
-	},
-];
+import getNotes from "./helpers/getNotes";
 
 function Notes() {
-	const [notes, setNotes] = useState(fakeNotes);
+	const [notes, setNotes] = useState([]);
 	const [note, setNote] = useState(null);
 	const [addNote, setAddNote] = useState(false);
 	const [seeNote, setSeeNote] = useState(false);
+
+	const data = async () => {
+		const notes = await getNotes();
+		console.log(notes);
+		setNotes(notes);
+	};
+
+	useEffect(() => {
+		data();
+	}, []);
 
 	function openedNote(id) {
 		const note = notes.find(
@@ -64,7 +54,7 @@ function Notes() {
 			<div className="notes-preview">
 				<div className="pinned">
 					{notes.map((note) =>
-						note.pinned ? (
+						note.pinned === "true" ? (
 							<NotePreview
 								key={note.id}
 								note={note}
@@ -79,7 +69,7 @@ function Notes() {
 
 				<div className="not-pinned">
 					{notes.map((note) =>
-						!note.pinned ? (
+						note.pinned !== "true" ? (
 							<NotePreview
 								key={note.id}
 								note={note}
