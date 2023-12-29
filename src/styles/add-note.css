@@ -1,0 +1,19 @@
+.add-note-small {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	margin: 30px auto;
+	border-radius: 8px;
+	gap: 1rem;
+	width: 60%;
+	height: 60%;
+	padding: 0.5rem 1rem;
+}
+
+.add-note-title {
+	font-size: 2rem;
+	color: #555;
+}

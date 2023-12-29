@@ -2,8 +2,16 @@ import "./styles/note-input.css";
 import { useState } from "react";
 import { BsPin, BsPinFill } from "react-icons/bs";
 
-function NoteInput({ setAddNote, notes }) {
-	const [isPinned, setIsPinned] = useState(false);
+function NoteDetails({
+	setSeeNote,
+	notes,
+	setNotes,
+	note,
+}) {
+	const { title, body, pinned } = note;
+
+	const [isPinned, setIsPinned] =
+		useState(pinned);
 
 	function handleAddNote() {
 		const title = document.querySelector(
@@ -13,18 +21,17 @@ function NoteInput({ setAddNote, notes }) {
 			".note-body-input"
 		).value;
 
-		if (!title || !body) return setAddNote(false);
+		if (!title || !body) return setSeeNote(false);
 
-		const newNote = {
-			id: notes.length + 2,
-			pinned: isPinned,
-			title,
-			body,
-		};
+		const newNote = notes.find(
+			(note) => note.id === note.id
+		);
 
-		notes.push(newNote);
+		newNote.title = title;
+		newNote.body = body;
+		newNote.pinned = isPinned;
 
-		setAddNote(false);
+		setSeeNote(false);
 	}
 
 	return (
@@ -33,7 +40,7 @@ function NoteInput({ setAddNote, notes }) {
 			onClick={(e) => {
 				if (e.target.className !== "overlay")
 					return;
-				setAddNote(false);
+				setSeeNote(false);
 			}}
 		>
 			<div className="add-note">
@@ -43,6 +50,7 @@ function NoteInput({ setAddNote, notes }) {
 						name="title"
 						placeholder="Enter Title"
 						className="note-input"
+						defaultValue={title}
 					/>
 					<button
 						className="btn pin-btn"
@@ -57,6 +65,7 @@ function NoteInput({ setAddNote, notes }) {
 						name="body"
 						placeholder="Enter Note"
 						className="note-body-input"
+						defaultValue={body}
 					/>
 				</div>
 
@@ -69,9 +78,22 @@ function NoteInput({ setAddNote, notes }) {
 					</button>
 					<button
 						className="btn cancel-btn"
-						onClick={() => setAddNote(false)}
+						onClick={() => setSeeNote(false)}
 					>
 						Cancel
+					</button>
+
+					<button
+						className="btn delete-btn"
+						onClick={() => {
+							const newNotes = notes.filter(
+								(n) => n.id !== note.id
+							);
+							setNotes(newNotes);
+							setSeeNote(false);
+						}}
+					>
+						Delete
 					</button>
 				</div>
 			</div>
@@ -79,4 +101,4 @@ function NoteInput({ setAddNote, notes }) {
 	);
 }
 
-export default NoteInput;
+export default NoteDetails;
