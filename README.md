@@ -13,7 +13,7 @@ This is a simple to-do list application built with React and Vite.
 First, clone the repository:
 
 ```sh
-git clone <repository-url>
+git clone <https://github.com/fatihsahin291/react-todo-list.git>
 ```
 
 Then install the dependencies:
