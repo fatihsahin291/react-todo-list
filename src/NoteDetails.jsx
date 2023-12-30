@@ -1,14 +1,11 @@
 import "./styles/note-input.css";
 import { useState } from "react";
 import { BsPin, BsPinFill } from "react-icons/bs";
+import { deleteNote } from "./helpers/deleteNote";
+import { saveChangedNote } from "./helpers/saveChangedNote";
 
-function NoteDetails({
-	setSeeNote,
-	notes,
-	setNotes,
-	note,
-}) {
-	const { title, body, pinned } = note;
+function NoteDetails({ setSeeNote, note }) {
+	const { title, body, pinned, id } = note;
 
 	const [isPinned, setIsPinned] =
 		useState(pinned);
@@ -23,9 +20,18 @@ function NoteDetails({
 
 		if (!title || !body) return setSeeNote(false);
 
-		note.title = title;
-		note.body = body;
-		note.pinned = isPinned;
+		const res = saveChangedNote(id, {
+			id,
+			title,
+			body,
+			pinned: isPinned + "",
+		});
+
+		res.then((res) => {
+			console.log(res);
+			// Reload the notes component
+			window.location.reload();
+		});
 
 		setSeeNote(false);
 	}
@@ -82,10 +88,8 @@ function NoteDetails({
 					<button
 						className="btn delete-btn"
 						onClick={() => {
-							const newNotes = notes.filter(
-								(n) => n.id !== note.id
-							);
-							setNotes(newNotes);
+							const res = deleteNote(id);
+							console.log(res);
 							setSeeNote(false);
 						}}
 					>

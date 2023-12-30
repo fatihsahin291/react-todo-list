@@ -4,97 +4,127 @@
 			"id": "1",
 			"pinned": "true",
 			"title": "The Shawshank Redemption",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "2",
 			"pinned": "false",
 			"title": "The Godfather",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "3",
 			"pinned": "false",
 			"title": "The Dark Knight",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "4",
 			"pinned": "true",
 			"title": "Fourth Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "5",
 			"pinned": "false",
 			"title": "Fifth Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "6",
 			"pinned": "false",
 			"title": "Sixth Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "7",
 			"pinned": "true",
 			"title": "Seventh Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "8",
 			"pinned": "false",
 			"title": "Eighth Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "9",
 			"pinned": "false",
 			"title": "Ninth Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "10",
 			"pinned": "false",
 			"title": "Tenth Note",
-			"body": "lorem ipsum dolor sit amet"
-		},
-		{
-			"id": "11",
-			"pinned": "true",
-			"title": "Eleventh Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "12",
 			"pinned": "false",
 			"title": "Twelfth Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "13",
 			"pinned": "false",
 			"title": "Thirteenth Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "14",
 			"pinned": "false",
 			"title": "Fourteenth Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "15",
 			"pinned": "false",
 			"title": "Fifteenth Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
 		},
 		{
 			"id": "16",
 			"pinned": "false",
 			"title": "Sixteenth Note",
-			"body": "lorem ipsum dolor sit amet"
+			"body": "lorem ipsum dolor sit amet",
+			"color": "default"
+		},
+		{
+			"title": "aaass",
+			"body": "aaass",
+			"pinned": "true",
+			"id": 17,
+			"color": "default"
+		},
+		{
+			"title": "sssss",
+			"body": "sssss",
+			"pinned": "true",
+			"id": 18,
+			"color": "default"
+		},
+		{
+			"title": "ddss",
+			"body": "ddss",
+			"pinned": "false",
+			"id": 19,
+			"color": "default"
 		}
 	]
 }

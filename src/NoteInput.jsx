@@ -1,6 +1,8 @@
 import "./styles/note-input.css";
 import { useState } from "react";
 import { BsPin, BsPinFill } from "react-icons/bs";
+import { addNewNote } from "./helpers/addNewNote";
+import getNotes from "./helpers/getNotes";
 
 function NoteInput({ setAddNote, notes }) {
 	const [isPinned, setIsPinned] = useState(false);
@@ -15,14 +17,17 @@ function NoteInput({ setAddNote, notes }) {
 
 		if (!title || !body) return setAddNote(false);
 
-		const newNote = {
+		addNewNote({
 			id: notes.length + 2,
-			pinned: isPinned,
 			title,
 			body,
-		};
+			pinned: isPinned + "",
+			color: "default",
+		});
 
-		notes.push(newNote);
+		getNotes().then((notes) => {
+			console.log(notes);
+		});
 
 		setAddNote(false);
 	}

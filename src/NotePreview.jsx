@@ -8,8 +8,6 @@ function NotePreview({
 }) {
 	const { title, body, pinned, id } = note;
 
-	console.log(note);
-
 	return (
 		<div
 			className="note-preview"

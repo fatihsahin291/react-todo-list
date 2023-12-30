@@ -14,7 +14,6 @@ function Notes() {
 
 	const data = async () => {
 		const notes = await getNotes();
-		console.log(notes);
 		setNotes(notes);
 	};
 
@@ -81,15 +80,6 @@ function Notes() {
 						)
 					)}
 				</div>
-			</div>
-
-			<div className="remove-all">
-				<button
-					className="btn remove-all-btn"
-					onClick={() => setNotes([])}
-				>
-					Remove All
-				</button>
 			</div>
 		</div>
 	);

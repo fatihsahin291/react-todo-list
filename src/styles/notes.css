@@ -1,3 +1,18 @@
+:root {
+	--note-bg-color-default: #f5f5f5;
+	--note-bg-color-coral: #faafa8;
+	--note-bg-color-peach: #f39f76;
+	--note-bg-color-sand-beige: #fff8b8;
+	--note-bg-color-mint-green: #e2f6d3;
+	--note-bg-color-sage: #b4ddd3;
+	--note-bg-color-fog: #d4e4ed;
+	--note-bg-color-storm: #aeccdc;
+	--note-bg-color-twilight: #d3bfdb;
+	--note-bg-color-tree-flower: #f6e2dd;
+	--note-bg-color-clay: #e9e3d4;
+	--note-bg-color-limestone: #efeff1;
+}
+
 .notes-preview {
 	display: flex;
 	flex-direction: column;
@@ -5,7 +20,7 @@
 	justify-content: center;
 	background-color: #fff;
 	border: 1px solid #ccc;
-	gap: 2rem;
+	gap: 4rem;
 	min-width: 100dvw;
 	border-radius: 4px;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -20,13 +35,4 @@
 	flex-wrap: wrap;
 	gap: 1rem;
 	margin: 0 0.5rem;
-}
-
-.remove-all-btn {
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-	margin: 0 2rem;
-}
-
-.remove-all-btn:hover {
-	background-color: #e50000;
 }
