@@ -3,6 +3,7 @@ import { useState } from "react";
 import { BsPin, BsPinFill } from "react-icons/bs";
 import { addNewNote } from "./helpers/addNewNote";
 import getNotes from "./helpers/getNotes";
+import NoteBGColorPicker from "./NoteBGColorPicker";
 
 function NoteInput({ setAddNote, notes }) {
 	const [isPinned, setIsPinned] = useState(false);
@@ -14,6 +15,9 @@ function NoteInput({ setAddNote, notes }) {
 		const body = document.querySelector(
 			".note-body-input"
 		).value;
+		const color =
+			document.querySelector(".add-note").style
+				.backgroundColor;
 
 		if (!title || !body) return setAddNote(false);
 
@@ -22,7 +26,7 @@ function NoteInput({ setAddNote, notes }) {
 			title,
 			body,
 			pinned: isPinned + "",
-			color: "default",
+			color: color,
 		});
 
 		getNotes().then((notes) => {
@@ -79,6 +83,10 @@ function NoteInput({ setAddNote, notes }) {
 						Cancel
 					</button>
 				</div>
+
+				<div className="divider"></div>
+
+				<NoteBGColorPicker />
 			</div>
 		</div>
 	);

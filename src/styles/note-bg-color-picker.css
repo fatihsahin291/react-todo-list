@@ -1,0 +1,33 @@
+.color-picker {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin: 0 0.5rem;
+	width: 55dvw;
+}
+
+.color {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+
+.color:hover {
+	border: 1px solid #000;
+}
+
+.color.selected {
+	border: 1px solid #000;
+}
+
+.choosen-color {
+	background-color: transparent;
+	color: transparent;
+	border: none;
+	border-radius: 500px;
+	cursor: pointer;
+}

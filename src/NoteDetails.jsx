@@ -3,9 +3,10 @@ import { useState } from "react";
 import { BsPin, BsPinFill } from "react-icons/bs";
 import { deleteNote } from "./helpers/deleteNote";
 import { saveChangedNote } from "./helpers/saveChangedNote";
+import NoteBGColorPicker from "./NoteBGColorPicker";
 
 function NoteDetails({ setSeeNote, note }) {
-	const { title, body, pinned, id } = note;
+	const { title, body, pinned, id, color } = note;
 
 	const [isPinned, setIsPinned] =
 		useState(pinned);
@@ -17,6 +18,9 @@ function NoteDetails({ setSeeNote, note }) {
 		const body = document.querySelector(
 			".note-body-input"
 		).value;
+		const color =
+			document.querySelector(".add-note").style
+				.backgroundColor;
 
 		if (!title || !body) return setSeeNote(false);
 
@@ -25,6 +29,7 @@ function NoteDetails({ setSeeNote, note }) {
 			title,
 			body,
 			pinned: isPinned + "",
+			color: color,
 		});
 
 		res.then((res) => {
@@ -36,6 +41,10 @@ function NoteDetails({ setSeeNote, note }) {
 		setSeeNote(false);
 	}
 
+	const bgStyle = {
+		backgroundColor: color,
+	};
+
 	return (
 		<div
 			className="overlay"
@@ -45,7 +54,7 @@ function NoteDetails({ setSeeNote, note }) {
 				setSeeNote(false);
 			}}
 		>
-			<div className="add-note">
+			<div className="add-note" style={bgStyle}>
 				<div className="title">
 					<input
 						type="text"
@@ -96,6 +105,10 @@ function NoteDetails({ setSeeNote, note }) {
 						Delete
 					</button>
 				</div>
+
+				<div className="divider"></div>
+
+				<NoteBGColorPicker />
 			</div>
 		</div>
 	);

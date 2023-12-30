@@ -6,7 +6,11 @@ function NotePreview({
 	setSeeNote,
 	openedNote,
 }) {
-	const { title, body, pinned, id } = note;
+	const { title, body, pinned, id, color } = note;
+
+	const bgStyle = {
+		backgroundColor: color,
+	};
 
 	return (
 		<div
@@ -15,6 +19,7 @@ function NotePreview({
 				openedNote(id);
 				setSeeNote(true);
 			}}
+			style={bgStyle}
 		>
 			<div className="note-title">
 				{title}
