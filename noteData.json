@@ -12,21 +12,21 @@
       "pinned": "false",
       "title": "The Godfather",
       "body": "lorem ipsum dolor sit amet",
-      "color": "default"
+      "color": "rgb(226, 246, 211)"
     },
     {
       "id": "3",
       "pinned": "false",
       "title": "The Dark Knight",
       "body": "lorem ipsum dolor sit amet",
-      "color": "default"
+      "color": "rgb(211, 191, 219)"
     },
     {
       "id": "4",
       "pinned": "true",
       "title": "Fourth Note",
       "body": "lorem ipsum dolor sit amet",
-      "color": "default"
+      "color": "rgb(212, 228, 237)"
     },
     {
       "id": "5",
@@ -40,7 +40,7 @@
       "pinned": "false",
       "title": "Sixth Note",
       "body": "lorem ipsum dolor sit amet",
-      "color": "default"
+      "color": "rgb(250, 175, 168)"
     },
     {
       "id": "7",
@@ -75,7 +75,7 @@
       "pinned": "false",
       "title": "Twelfth Note",
       "body": "lorem ipsum dolor sit amet",
-      "color": "default"
+      "color": "rgb(233, 227, 212)"
     },
     {
       "id": "13",
@@ -117,14 +117,14 @@
       "body": "sssss",
       "pinned": "true",
       "id": 18,
-      "color": "default"
+      "color": "rgb(226, 246, 211)"
     },
     {
       "title": "ddss",
       "body": "ddss",
       "pinned": "false",
       "id": 19,
-      "color": "default"
+      "color": "rgb(174, 204, 220)"
     },
     {
       "id": 20,

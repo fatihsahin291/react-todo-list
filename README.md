@@ -27,6 +27,10 @@ npm install
 To start the development server, run:
 
 ```sh
+json-server --watch noteData.json
+```
+
+```sh
 npm run start
 ```
 
