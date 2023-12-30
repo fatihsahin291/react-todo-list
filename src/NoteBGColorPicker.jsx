@@ -1,12 +1,22 @@
+import { useEffect } from "react";
 import "./styles/note-bg-color-picker.css";
 
-function NoteBGColorPicker() {
+function NoteBGColorPicker({ bgColor }) {
 	function handleNoteBGColor(e) {
 		const color = e.target.style.backgroundColor;
+
+		const colors =
+			document.querySelectorAll(".color");
 
 		document.querySelector(
 			".add-note"
 		).style.backgroundColor = color;
+
+		colors.forEach((color) => {
+			color.classList.remove("selected");
+		});
+
+		e.target.classList.add("selected");
 	}
 
 	function handleChoosenColor() {
@@ -18,6 +28,32 @@ function NoteBGColorPicker() {
 			".color.color-choose"
 		).style.backgroundColor = color;
 	}
+
+	useEffect(() => {
+		const colors =
+			document.querySelectorAll(".color");
+
+		const choosenColor = document.querySelector(
+			".color.color-choose"
+		);
+
+		// find the selected color and add the selected class if selected color is not found then add the selected class to the choosen color
+		let added = false;
+		colors.forEach((color) => {
+			if (
+				color.style.backgroundColor === bgColor
+			) {
+				color.classList.add("selected");
+				added = true;
+			}
+		});
+
+		if (!added) {
+			choosenColor.style.border =
+				"2px solid white";
+		}
+	}, [bgColor]);
+
 	return (
 		<div>
 			<div

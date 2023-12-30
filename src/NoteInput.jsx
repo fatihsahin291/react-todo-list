@@ -31,6 +31,8 @@ function NoteInput({ setAddNote, notes }) {
 
 		getNotes().then((notes) => {
 			console.log(notes);
+			// Reload the notes component
+			window.location.reload();
 		});
 
 		setAddNote(false);

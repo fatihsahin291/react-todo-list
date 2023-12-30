@@ -4,6 +4,26 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden;
+}
+
+/* modify scroll button */
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #aaa;
+	transition: background 0.4s ease-in-out;
+	border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #888;
 }
 
 .app-layout {
@@ -22,7 +42,7 @@
 	padding: 0.5rem 1rem;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	background-color: #fff;
+	background-color: transparent;
 	color: #333;
 	font-size: 1rem;
 	cursor: pointer;

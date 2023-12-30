@@ -41,6 +41,17 @@ function NoteDetails({ setSeeNote, note }) {
 		setSeeNote(false);
 	}
 
+	function handleDeleteNote() {
+		const res = deleteNote(id);
+		console.log(res);
+		res.then((res) => {
+			console.log(res);
+			// Reload the notes component
+			window.location.reload();
+		});
+		setSeeNote(false);
+	}
+
 	const bgStyle = {
 		backgroundColor: color,
 	};
@@ -96,11 +107,7 @@ function NoteDetails({ setSeeNote, note }) {
 
 					<button
 						className="btn delete-btn"
-						onClick={() => {
-							const res = deleteNote(id);
-							console.log(res);
-							setSeeNote(false);
-						}}
+						onClick={handleDeleteNote}
 					>
 						Delete
 					</button>
@@ -108,7 +115,7 @@ function NoteDetails({ setSeeNote, note }) {
 
 				<div className="divider"></div>
 
-				<NoteBGColorPicker />
+				<NoteBGColorPicker bgColor={color} />
 			</div>
 		</div>
 	);

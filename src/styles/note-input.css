@@ -76,24 +76,9 @@
 	width: 100%;
 }
 
-.save-btn {
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 0.5rem 1rem;
-	font-size: 1rem;
-	cursor: pointer;
-	transition: background-color 0.2s ease-in-out;
-}
-
-.cancel-btn {
-	background-color: #fff;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	padding: 0.5rem 1rem;
-	font-size: 1rem;
-	cursor: pointer;
-	transition: background-color 0.2s ease-in-out;
+.save-btn:hover {
+	background-color: #0f9d58;
+	color: #fff;
 }
 
 .cancel-btn:hover {
